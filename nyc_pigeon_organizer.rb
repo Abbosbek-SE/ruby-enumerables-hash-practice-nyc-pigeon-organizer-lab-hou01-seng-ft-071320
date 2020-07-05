@@ -6,12 +6,12 @@ def nyc_pigeon_organizer(data)
         if !hash[i]
           hash[i] = {}
         end
-        if !hash[i]
-          hash[i] = key
+        if !hash[i][key]
+          hash[i][key] = []
         end
+        hash[i][key].push(inner_key.to_s)
       end
     end
   end
-  hash
 end
 
